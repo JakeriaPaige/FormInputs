@@ -12,43 +12,44 @@
   </head>
   <body>
     <div id="banner" class="container">
-      <h1 class="display-4">Hello, world!</h1>
+      <h1 class="display-4">Inkling or Octoling</h1>
     </div>
     <div class="container">
       <form action="{{ url_for('process_inputs') }}" method="post">
         <div class="form-group">
-          <label for="input_name">First Name</label>
-          <input type="text" class="form-control" name="input_name"  id="input_name" placeholder="Fred Flintstone">
+          <label for="input_name">Enter your name, child</label>
+          <input type="text" class="form-control" name="input_name"  id="input_name" placeholder="Jakeria Paige">
         </div>
         <div class="form-group">
-          <label for="input_dropdown">Example select</label>
+          <label for="Weapon Choice">Choose your weapon</label>
           <select class="form-control" name="input_dropdown" id="input_dropdown">
-            <option>1 fish</option>
-            <option>2 fish</option>
-            <option>red fish</option>
-            <option>the spanish inquisition</option>
-            <option>blue fish</option>
+            <option>Blaster</option>
+            <option>Roller</option>
+            <option>Charger</option>
+            <option>Splattershot</option>
+            <option>BAMBOOZLER</option>
           </select>
         </div>
         <div class="form-group">
-          <label for="input_select">Example multiple select</label>
+          <label for="Kid or Squid">Kid or Squid</label>
+            <select class="form-control" name="input_dropdown" id="input_dropdown">
+            <option>Kid</option>
+            <option>Squid</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="Sounds">Choose your quote</label>
           <select multiple class="form-control" name="input_select" id="input_select">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
+            <option>Woomy</option>
+            <option>Ngyes</option>
+            <option>Oomi</option>
+            <option>Veemo</option>
           </select>
-        </div>
-        <div class="form-group">
-          <label for="input_freeform">Example textarea</label>
-          <textarea class="form-control" name="input_freeform" id="input_freeform" rows="3"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
     </div>
     <div class="container">
-      {% if input_data %} {{ input_data }} {% endif %}
       <br />
       {% if output %} {{ output }} {% endif %}
     </div>
